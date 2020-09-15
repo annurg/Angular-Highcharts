@@ -45,6 +45,9 @@ export class CityComponent implements OnInit {
         break;
       }
     }
+    this.options1.series[0].data = this.year.filter(ya => ya.name === parseInt(y));
+    console.log(this.options1.series[0].data);
+    Highcharts.chart('container', this.options1)
   }
   onSelectCity(y) {
     this.selectedy = null;
